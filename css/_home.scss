@@ -1,0 +1,76 @@
+// Homepage
+#home {
+    padding-top: 70px;
+}
+
+.home-wrap {
+    height: 100vh;
+}
+.second-wrap {
+    height: 100vh;
+}
+
+.banner {
+    background: url('../img/glass.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    font-size: 11rem;
+    color: $primary-color;
+    & p {
+        line-height: 110px;
+        padding-left: 64px;
+    }
+}
+
+.half {
+    width: 2px;
+    height: 100px;
+    background: $secondary-color;
+    text-align: center;
+    margin: auto;
+    p {
+        padding-left: 9px;    
+    }
+}
+
+.s-one {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.8em;
+    height: 30vh;
+    margin-bottom: 50px;
+    .content-text {
+        padding: 0px 70px;
+        &.one {
+            font-size: 1.7em;
+            font-weight: 800;
+        }
+        &.two {
+            font-size: .8em;
+            padding-top: 36px;
+        }
+        &.three {
+            font-size: 1.7em;
+            font-weight: 800;
+        }
+    }
+}
+
+.s-two {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to right, darken($primary-color, 5) 50%, $primary-color 50%);
+    h1 {
+        padding: 0px 36px;
+        margin: 0;
+        font-size: 4em;
+        background-color: $header-color;
+        color: $primary-color;
+        text-align: center;
+    }
+    .d-one {@extend %forHomeFlex;}
+    .d-two {
+        @extend %forHomeFlex;
+    }
+}

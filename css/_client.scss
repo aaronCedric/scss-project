@@ -1,0 +1,27 @@
+.wrap-client {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-gap: 60px;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    .client-space {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 60px;
+        padding: 64px;
+        img {
+            width: 150px;
+            height: 90px;
+        }
+    }
+    .info-space {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-right: 64px;
+        text-align: left;
+        margin-left: 64px;
+        @extend %textDecor;
+    }
+}

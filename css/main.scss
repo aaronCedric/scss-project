@@ -1,0 +1,44 @@
+@import 'reset';
+@import 'config';
+@import 'nav';
+@import 'home';
+@import 'client';
+@import 'works';
+@import 'contact';
+
+body {
+    font-family: $main-font;
+    background-color: $primary-color;
+    height: 100%;
+}
+a {color: $secondary-color;}
+.des {font-size: 10px;}
+
+// Footer
+#main-footer {
+    width: 100%;
+    height: 70px;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .soc-med {
+        & a:hover {
+            color: $header-color;
+            @include easeOut;
+        }
+        & a i {padding: 0px 9px;}
+    }
+    .bot-nav {
+        .current {
+            color: $header-color;
+        }
+        a:hover {
+            color: $header-color;
+            @include easeOut;
+        }
+        p {display: inline-block;}
+    }
+
+}
+@import 'mobile';

@@ -1,0 +1,154 @@
+@include mediaSm {
+    .wrap-client {
+        .client-space {
+            grid-template-columns: 100%;
+            margin: auto;
+        }
+        .info-space {
+            margin: 0;
+            font-size: 3rem;
+        }
+    }
+}
+
+@include mediaMd {
+    // Home Page
+    .top-container {
+        position: fixed;
+        &.black {
+            background-color: $secondary-color;
+            @include easeOut;
+        }
+        .nav-bar.white {
+            .line-btn {
+                background-color: $primary-color;
+            }
+        }
+    }
+    .main-nav {
+        font-size: .8em;
+        text-align: center;
+    }
+    .page-style {display: none;}
+    .half {display: none;}
+    .logo {
+        position: fixed;
+        margin: 0px 270px;
+    }
+    #home {
+        padding-top: 70px;
+        overflow: hidden;
+        .banner {
+            font-size: 3.5em;
+            text-align: center;
+            & p {padding: 0;}
+        }
+    }
+    .s-one {
+        flex-direction: column;
+        text-align: left;
+        padding: 0px 18px;
+        font-size: 16px;
+        .content-text {
+            padding: 0;
+            font-size: 1.1em;
+            &.one {
+                font-size: 1.1em;
+                & > p {display: inline-block;}
+            }
+            &.three > p{display: inline-block;}
+        }
+    }
+    .s-two {
+        margin-top: 50px;
+        flex-direction: column;
+        overflow: hidden;
+        h1 {
+            font-size: 2em;
+        }
+        .d-one {
+            & > h1 {text-align: center;}
+            .info-flex {font-size: 1.2em;}
+        }
+        .d-two {
+            & > h1 {text-align: center;}
+            .info-flex {font-size: 1.2em;}
+        }
+    }
+
+    //  Works Page
+    #work {
+        padding: 100px 0px 0px 0px;
+        .top-part {
+            grid-template-columns: 1fr;
+            text-align: center;
+            &-right {ul {list-style: none;}}
+        }
+        .work-style {
+            grid-template-columns: 1fr;
+            text-align: center;
+            img {height: 400px;}
+        }
+        .work-style.one {margin-top: 600px;}
+        .work-style:nth-child(odd) {
+            .work-style-details {
+                order: 2;
+                text-align: center;
+            }
+            img {order: 1;}
+        }
+    }
+
+    // Client Page
+    .wrap-client {
+        grid-template-columns: 100%;
+        height: 100%;
+        .info-space {
+            margin-top: 120px;
+            text-align: center;
+        }
+    }
+
+    // Contact Page
+    .wrapper {
+        padding: 120px 9px;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "leftCont"
+        "rightCont";
+        height: 100%;
+        .left-content {
+            grid-area: leftCont;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .right-content {
+            grid-area: rightCont;
+            margin-bottom: 70px;
+        }
+    }
+
+    // Footer
+    #main-footer {
+        flex-direction: column;
+        padding-top: 45px;
+        .bot-nav {
+            padding-top: 9px;
+            font-size: 1.1em;
+        }
+        .copy-right {padding-top: 9px;}
+    }
+}
+
+@include mediaLg {
+    body {
+        min-width: 1315px;
+    }
+    .banner {margin-bottom: 250px;}
+    .s-one {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 200px;
+    }
+    .half {display: none;}
+}
