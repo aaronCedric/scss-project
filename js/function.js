@@ -36,7 +36,7 @@ sal({
     once: false,
 });
 
-jQuery(document).ready(function($) {
+$(document).ready(function() {
     $(window).on("scroll", function() {
         if($(window).scrollTop()) {
             $('.top-container').addClass('black');
